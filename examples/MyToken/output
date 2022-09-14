@@ -1,0 +1,63 @@
+
+2022-09-06 23:22:30,918 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO -           !!! Integer overflow detected !!!
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO - SWC-ID:   101
+2022-09-06 23:22:30,919 - Detector - INFO - Severity: High
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO - Source code line:
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO - examples/MyToken/contracts/MyToken.sol:51:1
+2022-09-06 23:22:30,919 - Detector - INFO - balanceOf[msg.sender] += mintedAmount
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO - Transaction sequence:
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO - Transaction 1 - mintToken(uint256):
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,919 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-06 23:22:30,919 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-06 23:22:30,919 - Detector - INFO - Value:     0 Wei
+2022-09-06 23:22:30,919 - Detector - INFO - Gas Limit: 4500000
+2022-09-06 23:22:30,919 - Detector - INFO - Input:     0xc634d0326482edac5785a57153070cee9e1fca28
+2022-09-06 23:22:30,919 - Detector - INFO -            305d6af3331d6014c7405769cb03f6ac
+2022-09-06 23:22:30,919 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,920 - Detector - INFO - Transaction 2 - mintToken(uint256):
+2022-09-06 23:22:30,920 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,920 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-06 23:22:30,920 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-06 23:22:30,920 - Detector - INFO - Value:     0 Wei
+2022-09-06 23:22:30,920 - Detector - INFO - Gas Limit: 4500000
+2022-09-06 23:22:30,920 - Detector - INFO - Input:     0xc634d032e634b38dc1e7e069ee4d058022f9910b
+2022-09-06 23:22:30,920 - Detector - INFO -            f8292211ca20a3cd7094653e3568cc57
+2022-09-06 23:22:30,920 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,921 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,921 - Detector - INFO -           !!! Integer overflow detected !!!
+2022-09-06 23:22:30,921 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,921 - Detector - INFO - SWC-ID:   101
+2022-09-06 23:22:30,921 - Detector - INFO - Severity: High
+2022-09-06 23:22:30,922 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,922 - Detector - INFO - Source code line:
+2022-09-06 23:22:30,922 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,922 - Detector - INFO - examples/MyToken/contracts/MyToken.sol:52:1
+2022-09-06 23:22:30,922 - Detector - INFO - totalSupply += mintedAmount
+2022-09-06 23:22:30,922 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,922 - Detector - INFO - Transaction sequence:
+2022-09-06 23:22:30,922 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,922 - Detector - INFO - Transaction 1 - mintToken(uint256):
+2022-09-06 23:22:30,923 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,923 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-06 23:22:30,923 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-06 23:22:30,923 - Detector - INFO - Value:     0 Wei
+2022-09-06 23:22:30,923 - Detector - INFO - Gas Limit: 4500000
+2022-09-06 23:22:30,923 - Detector - INFO - Input:     0xc634d0326482edac5785a57153070cee9e1fca28
+2022-09-06 23:22:30,923 - Detector - INFO -            305d6af3331d6014c7405769cb03f6ac
+2022-09-06 23:22:30,923 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,923 - Detector - INFO - Transaction 2 - mintToken(uint256):
+2022-09-06 23:22:30,923 - Detector - INFO - -----------------------------------------------------
+2022-09-06 23:22:30,923 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-06 23:22:30,923 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-06 23:22:30,923 - Detector - INFO - Value:     0 Wei
+2022-09-06 23:22:30,923 - Detector - INFO - Gas Limit: 4500000
+2022-09-06 23:22:30,923 - Detector - INFO - Input:     0xc634d032e634b38dc1e7e069ee4d058022f9910b
+2022-09-06 23:22:30,923 - Detector - INFO -            f8292211ca20a3cd7094653e3568cc57
+2022-09-06 23:22:30,923 - Detector - INFO - -----------------------------------------------------

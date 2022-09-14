@@ -1,0 +1,62 @@
+2022-09-11 01:17:14,886 - Main     - INFO - Initializing seed to 0.5171363189276157
+2022-09-11 01:17:14,904 - Fuzzer   - INFO - Fuzzing contract BToken
+2022-09-11 01:17:14,972 - Analysis - INFO - Generation number 0 	 Code coverage: 52.01% (207/398) 	 Branch coverage: 42.86% (12/28) 	 Transactions: 7 (6 unique)   	 Time: 0.06270194053649902
+2022-09-11 01:17:15,037 - Analysis - INFO - Generation number 1 	 Code coverage: 52.01% (207/398) 	 Branch coverage: 42.86% (12/28) 	 Transactions: 13 (9 unique)   	 Time: 0.12797260284423828
+2022-09-11 01:17:15,285 - Analysis - INFO - Generation number 2 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 53.57% (15/28) 	 Transactions: 19 (12 unique)   	 Time: 0.3759765625
+2022-09-11 01:17:15,369 - Analysis - INFO - Generation number 3 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 25 (16 unique)   	 Time: 0.45981693267822266
+2022-09-11 01:17:15,470 - Analysis - INFO - Generation number 4 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 31 (18 unique)   	 Time: 0.5605499744415283
+2022-09-11 01:17:15,760 - Analysis - INFO - Generation number 5 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 37 (21 unique)   	 Time: 0.8507447242736816
+2022-09-11 01:17:16,018 - Analysis - INFO - Generation number 6 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 43 (24 unique)   	 Time: 1.1085329055786133
+2022-09-11 01:17:16,287 - Analysis - INFO - Generation number 7 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 49 (28 unique)   	 Time: 1.3777899742126465
+2022-09-11 01:17:16,547 - Analysis - INFO - Generation number 8 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 55 (29 unique)   	 Time: 1.6379811763763428
+2022-09-11 01:17:16,807 - Analysis - INFO - Generation number 9 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 61 (29 unique)   	 Time: 1.8973677158355713
+2022-09-11 01:17:17,060 - Analysis - INFO - Generation number 10 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 67 (32 unique)   	 Time: 2.1508264541625977
+2022-09-11 01:17:17,316 - Analysis - INFO - Generation number 11 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 73 (35 unique)   	 Time: 2.4068872928619385
+2022-09-11 01:17:17,575 - Analysis - INFO - Generation number 12 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 79 (38 unique)   	 Time: 2.665963888168335
+2022-09-11 01:17:17,846 - Analysis - INFO - Generation number 13 	 Code coverage: 52.76% (210/398) 	 Branch coverage: 57.14% (16/28) 	 Transactions: 85 (40 unique)   	 Time: 2.9367475509643555
+2022-09-11 01:17:18,142 - Analysis - INFO - Generation number 14 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 97 (46 unique)   	 Time: 3.233161687850952
+2022-09-11 01:17:18,380 - Analysis - INFO - Generation number 15 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 103 (48 unique)   	 Time: 3.4709129333496094
+2022-09-11 01:17:18,627 - Analysis - INFO - Generation number 16 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 109 (52 unique)   	 Time: 3.7172515392303467
+2022-09-11 01:17:18,871 - Analysis - INFO - Generation number 17 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 115 (53 unique)   	 Time: 3.9618773460388184
+2022-09-11 01:17:19,124 - Analysis - INFO - Generation number 18 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 121 (55 unique)   	 Time: 4.214590072631836
+2022-09-11 01:17:19,377 - Analysis - INFO - Generation number 19 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 127 (56 unique)   	 Time: 4.4679481983184814
+2022-09-11 01:17:19,639 - Analysis - INFO - Generation number 20 	 Code coverage: 53.52% (213/398) 	 Branch coverage: 60.71% (17/28) 	 Transactions: 133 (57 unique)   	 Time: 4.729516506195068
+2022-09-11 01:17:19,805 - Analysis - INFO - -----------------------------------------------------
+2022-09-11 01:17:19,805 - Analysis - INFO - Number of generations: 	 20
+2022-09-11 01:17:19,805 - Analysis - INFO - Number of transactions: 	 133 (57 unique)
+2022-09-11 01:17:19,805 - Analysis - INFO - Transactions per second: 	 27
+2022-09-11 01:17:19,805 - Analysis - INFO - Total code coverage: 	 53.52% (213/398)
+2022-09-11 01:17:19,805 - Analysis - INFO - Total branch coverage: 	 60.71% (17/28)
+2022-09-11 01:17:19,805 - Analysis - INFO - Total execution time: 	 4.90 seconds
+2022-09-11 01:17:19,805 - Analysis - INFO - Total memory consumption: 	 109.83 MB
+
+     ______            ______                _           
+    / ____/___  ____  / ____/_  __________  (_)_  _______
+   / /   / __ \/ __ \/ /_  / / / /_  /_  / / / / / / ___/
+  / /___/ /_/ / / / / __/ / /_/ / / /_/ /_/ / /_/ (__  ) 
+  \____/\____/_/ /_/_/    \__,_/ /___/___/_/\__,_/____/  
+
+@@@@@@@@create_fake_accounts create_fake_accounts create_fake_accounts %s ['0xcafebabecafebabecafebabecafebabecafebabe', '0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef']
+@@@@@@@@ constructor not in !!! 1111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111

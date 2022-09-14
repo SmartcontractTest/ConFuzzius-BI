@@ -1,0 +1,140 @@
+2022-09-11 01:18:07,545 - Main     - INFO - Initializing seed to 0.6680425243492544
+2022-09-11 01:18:07,582 - Fuzzer   - INFO - Fuzzing contract RTB0
+2022-09-11 01:18:07,857 - Analysis - INFO - Generation number 0 	 Code coverage: 41.44% (465/1122) 	 Branch coverage: 55.00% (44/80) 	 Transactions: 25 (23 unique)   	 Time: 0.2641744613647461
+2022-09-11 01:18:08,120 - Analysis - INFO - Generation number 1 	 Code coverage: 41.44% (465/1122) 	 Branch coverage: 56.25% (45/80) 	 Transactions: 48 (27 unique)   	 Time: 0.5274958610534668
+2022-09-11 01:18:08,373 - Analysis - INFO - Generation number 2 	 Code coverage: 41.44% (465/1122) 	 Branch coverage: 56.25% (45/80) 	 Transactions: 67 (32 unique)   	 Time: 0.7808208465576172
+2022-09-11 01:18:08,590 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,590 - Detector - INFO -            !!! Locking ether detected !!!            
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,591 - Detector - INFO - SWC-ID:   132
+2022-09-11 01:18:08,591 - Detector - INFO - Severity: Medium
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,591 - Detector - INFO - Source code line:
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,591 - Detector - INFO - dataset/asset-related/manuinject/All/RTB0.sol:59:1
+2022-09-11 01:18:08,591 - Detector - INFO - contract RTB0 {
+    using SafeMath for uint256;
+
+    uint8 public decimals = 0;
+    uint256 public totalSupply = 300;
+    uint256 public totalSold = 0;
+    uint256 public price = 1 ether;
+    string public name = "Retro Block Token 1";
+    string public symbol = "RTB0";
+    address public owner;
+    address public finance;
+
+    mapping (address=>uint256) received;
+    uint256 profit;
+    address public jackpot;
+    mapping (address=>uint256) changeProfit;
+
+    mapping (address=>uint256) balances;
+    mapping (address=>mapping (address=>uint256)) allowed;
+
+    event Transfer(address indexed _from, address indexed _to, uint256 _value);
+    event Approval(address indexed _owner, address indexed _spender, uint256 _value);
+    event AddProfit(address indexed _from, uint256 _value, uint256 _newProfit);
+    event Withdraw(address indexed _addr, uint256 _value);
+
+
+    constructor() public payable{
+        owner = msg.sender;
+        balances[this] = 300;
+    }
+
+    function() public payable {
+        if(msg.value > 0){
+            profit = msg.value.div(totalSupply).add(profit);
+            emit AddProfit(msg.sender, msg.value, profit);
+        }
+    }
+
+    function balanceOf(address _owner) external view returns (uint256) {
+        return balances[_owner];
+    }
+
+    function transfer(address _from, address _to, uint256 _value) external returns (bool) { // bug : Unexpected Asset Copy
+        require(_to != address(0), "Receiver address cannot be null");
+        require(_value > 0 && _value <= balances[_from]);
+        uint256 newToVal = balances[_to] + _value;
+        assert(newToVal >= balances[_to]);
+        uint256 newFromVal = balances[_from] - _value;
+        balances[_from] =  newFromVal;
+        balances[_to] = newToVal;
+        uint256 temp = _value.mul(profit);
+        changeProfit[_from] = changeProfit[_from].add(temp);
+        received[_to] = received[_to].add(temp);
+        emit Transfer(_from, _to, _value);
+        return true;
+    }
+
+}
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,591 - Detector - INFO - Transaction sequence:
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,591 - Detector - INFO - Transaction:
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,591 - Detector - INFO - From:      0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef
+2022-09-11 01:18:08,591 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-11 01:18:08,591 - Detector - INFO - Value:     1 Wei
+2022-09-11 01:18:08,591 - Detector - INFO - Gas Limit: 4500000
+2022-09-11 01:18:08,591 - Detector - INFO - Input:     0x00000000
+2022-09-11 01:18:08,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:18:08,593 - Analysis - INFO - Generation number 3 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 84 (34 unique)   	 Time: 1.0002434253692627
+2022-09-11 01:18:08,877 - Analysis - INFO - Generation number 4 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 109 (41 unique)   	 Time: 1.2849678993225098
+2022-09-11 01:18:09,517 - Analysis - INFO - Generation number 5 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 158 (54 unique)   	 Time: 1.9242303371429443
+2022-09-11 01:18:10,577 - Analysis - INFO - Generation number 6 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 230 (70 unique)   	 Time: 2.9849562644958496
+2022-09-11 01:18:11,783 - Analysis - INFO - Generation number 7 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 314 (90 unique)   	 Time: 4.190185546875
+2022-09-11 01:18:12,903 - Analysis - INFO - Generation number 8 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 399 (111 unique)   	 Time: 5.310687303543091
+2022-09-11 01:18:14,127 - Analysis - INFO - Generation number 9 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 489 (131 unique)   	 Time: 6.534062623977661
+2022-09-11 01:18:15,538 - Analysis - INFO - Generation number 10 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 587 (152 unique)   	 Time: 7.9458465576171875
+2022-09-11 01:18:16,842 - Analysis - INFO - Generation number 11 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 684 (170 unique)   	 Time: 9.24985957145691
+2022-09-11 01:18:18,359 - Analysis - INFO - Generation number 12 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 785 (190 unique)   	 Time: 10.766307353973389
+2022-09-11 01:18:19,805 - Analysis - INFO - Generation number 13 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 883 (212 unique)   	 Time: 12.212504863739014
+2022-09-11 01:18:21,331 - Analysis - INFO - Generation number 14 	 Code coverage: 49.73% (558/1122) 	 Branch coverage: 60.00% (48/80) 	 Transactions: 985 (232 unique)   	 Time: 13.738662481307983
+2022-09-11 01:18:21,927 - Analysis - INFO - Generation number 15 	 Code coverage: 58.91% (661/1122) 	 Branch coverage: 66.25% (53/80) 	 Transactions: 1033 (254 unique)   	 Time: 14.334123134613037
+2022-09-11 01:18:22,233 - Analysis - INFO - Generation number 16 	 Code coverage: 58.91% (661/1122) 	 Branch coverage: 66.25% (53/80) 	 Transactions: 1057 (259 unique)   	 Time: 14.640760660171509
+2022-09-11 01:18:22,545 - Analysis - INFO - Generation number 17 	 Code coverage: 59.18% (664/1122) 	 Branch coverage: 67.50% (54/80) 	 Transactions: 1081 (262 unique)   	 Time: 14.952652931213379
+2022-09-11 01:18:22,930 - Analysis - INFO - Generation number 18 	 Code coverage: 59.18% (664/1122) 	 Branch coverage: 67.50% (54/80) 	 Transactions: 1109 (267 unique)   	 Time: 15.337275266647339
+2022-09-11 01:18:23,834 - Analysis - INFO - Generation number 19 	 Code coverage: 62.12% (697/1122) 	 Branch coverage: 68.75% (55/80) 	 Transactions: 1165 (282 unique)   	 Time: 16.241019010543823
+2022-09-11 01:18:24,849 - Analysis - INFO - Generation number 20 	 Code coverage: 62.12% (697/1122) 	 Branch coverage: 68.75% (55/80) 	 Transactions: 1237 (299 unique)   	 Time: 17.256124258041382
+2022-09-11 01:18:24,974 - Analysis - INFO - -----------------------------------------------------
+2022-09-11 01:18:24,974 - Analysis - INFO - Number of generations: 	 20
+2022-09-11 01:18:24,974 - Analysis - INFO - Number of transactions: 	 1237 (299 unique)
+2022-09-11 01:18:24,974 - Analysis - INFO - Transactions per second: 	 71
+2022-09-11 01:18:24,974 - Analysis - INFO - Total code coverage: 	 62.12% (697/1122)
+2022-09-11 01:18:24,974 - Analysis - INFO - Total branch coverage: 	 68.75% (55/80)
+2022-09-11 01:18:24,974 - Analysis - INFO - Total execution time: 	 17.38 seconds
+2022-09-11 01:18:24,974 - Analysis - INFO - Total memory consumption: 	 98.64 MB
+
+     ______            ______                _           
+    / ____/___  ____  / ____/_  __________  (_)_  _______
+   / /   / __ \/ __ \/ /_  / / / /_  /_  / / / / / / ___/
+  / /___/ /_/ / / / / __/ / /_/ / / /_/ /_/ / /_/ (__  ) 
+  \____/\____/_/ /_/_/    \__,_/ /___/___/_/\__,_/____/  
+
+@@@@@@@@create_fake_accounts create_fake_accounts create_fake_accounts %s ['0xcafebabecafebabecafebabecafebabecafebabe', '0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef']
+@@@@@@@@ constructor not in !!! 1111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
