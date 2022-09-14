@@ -1,0 +1,136 @@
+2022-09-11 01:49:19,551 - Main     - INFO - Initializing seed to 0.9027335748674203
+2022-09-11 01:49:19,565 - Fuzzer   - INFO - Fuzzing contract Token
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO -           !!! Integer underflow detected !!!          
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO - SWC-ID:   101
+2022-09-11 01:49:19,584 - Detector - INFO - Severity: High
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO - Source code line:
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO - dataset/asset-related/manuinject/All/token.sol:20:1
+2022-09-11 01:49:19,584 - Detector - INFO - balances[msg.sender] - _value
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO - Transaction sequence:
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO - Transaction - transfer(address,uint256):
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,584 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-11 01:49:19,584 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-11 01:49:19,584 - Detector - INFO - Value:     0 Wei
+2022-09-11 01:49:19,584 - Detector - INFO - Gas Limit: 4500000
+2022-09-11 01:49:19,584 - Detector - INFO - Input:     0xa9059cbb000000000000000000000000cafebabe
+2022-09-11 01:49:19,584 - Detector - INFO -            cafebabecafebabecafebabecafebabe1bda0eba78
+2022-09-11 01:49:19,584 - Detector - INFO -            34404a7dcca1fdf56adebb736ba926c676b0513556
+2022-09-11 01:49:19,584 - Detector - INFO -            dc1e092a38b6
+2022-09-11 01:49:19,584 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,586 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,586 - Detector - INFO -           !!! Integer underflow detected !!!          
+2022-09-11 01:49:19,586 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,586 - Detector - INFO - SWC-ID:   101
+2022-09-11 01:49:19,587 - Detector - INFO - Severity: High
+2022-09-11 01:49:19,587 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,587 - Detector - INFO - Source code line:
+2022-09-11 01:49:19,587 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,587 - Detector - INFO - dataset/asset-related/manuinject/All/token.sol:22:1
+2022-09-11 01:49:19,587 - Detector - INFO - balances[msg.sender] -= _value
+2022-09-11 01:49:19,587 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,587 - Detector - INFO - Transaction sequence:
+2022-09-11 01:49:19,587 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,587 - Detector - INFO - Transaction - transfer(address,uint256):
+2022-09-11 01:49:19,587 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,587 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-11 01:49:19,587 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-11 01:49:19,587 - Detector - INFO - Value:     0 Wei
+2022-09-11 01:49:19,587 - Detector - INFO - Gas Limit: 4500000
+2022-09-11 01:49:19,587 - Detector - INFO - Input:     0xa9059cbb000000000000000000000000cafebabe
+2022-09-11 01:49:19,587 - Detector - INFO -            cafebabecafebabecafebabecafebabe1bda0eba78
+2022-09-11 01:49:19,587 - Detector - INFO -            34404a7dcca1fdf56adebb736ba926c676b0513556
+2022-09-11 01:49:19,587 - Detector - INFO -            dc1e092a38b6
+2022-09-11 01:49:19,587 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,590 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,590 - Detector - INFO -           !!! Integer overflow detected !!!          
+2022-09-11 01:49:19,590 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,590 - Detector - INFO - SWC-ID:   101
+2022-09-11 01:49:19,590 - Detector - INFO - Severity: High
+2022-09-11 01:49:19,590 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,590 - Detector - INFO - Source code line:
+2022-09-11 01:49:19,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,591 - Detector - INFO - dataset/asset-related/manuinject/All/token.sol:23:1
+2022-09-11 01:49:19,591 - Detector - INFO - balances[_to] += _value
+2022-09-11 01:49:19,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,591 - Detector - INFO - Transaction sequence:
+2022-09-11 01:49:19,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,591 - Detector - INFO - Transaction - transfer(address,uint256):
+2022-09-11 01:49:19,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,591 - Detector - INFO - From:      0xcafebabecafebabecafebabecafebabecafebabe
+2022-09-11 01:49:19,591 - Detector - INFO - To:        0x2c5e8a3b3aad9df32339409534e64dfcabcd3a65
+2022-09-11 01:49:19,591 - Detector - INFO - Value:     0 Wei
+2022-09-11 01:49:19,591 - Detector - INFO - Gas Limit: 4500000
+2022-09-11 01:49:19,591 - Detector - INFO - Input:     0xa9059cbb000000000000000000000000cafebabe
+2022-09-11 01:49:19,591 - Detector - INFO -            cafebabecafebabecafebabecafebabe1bda0eba78
+2022-09-11 01:49:19,591 - Detector - INFO -            34404a7dcca1fdf56adebb736ba926c676b0513556
+2022-09-11 01:49:19,591 - Detector - INFO -            dc1e092a38b6
+2022-09-11 01:49:19,591 - Detector - INFO - -----------------------------------------------------
+2022-09-11 01:49:19,678 - Analysis - INFO - Generation number 0 	 Code coverage: 96.00% (240/250) 	 Branch coverage: 80.00% (16/20) 	 Transactions: 11 (10 unique)   	 Time: 0.10715842247009277
+2022-09-11 01:49:19,810 - Analysis - INFO - Generation number 1 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 24 (16 unique)   	 Time: 0.23968720436096191
+2022-09-11 01:49:20,070 - Analysis - INFO - Generation number 2 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 49 (24 unique)   	 Time: 0.4995434284210205
+2022-09-11 01:49:20,449 - Analysis - INFO - Generation number 3 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 86 (33 unique)   	 Time: 0.8778378963470459
+2022-09-11 01:49:20,847 - Analysis - INFO - Generation number 4 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 124 (43 unique)   	 Time: 1.276681661605835
+2022-09-11 01:49:21,264 - Analysis - INFO - Generation number 5 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 165 (53 unique)   	 Time: 1.6930716037750244
+2022-09-11 01:49:21,688 - Analysis - INFO - Generation number 6 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 206 (63 unique)   	 Time: 2.1174190044403076
+2022-09-11 01:49:22,121 - Analysis - INFO - Generation number 7 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 248 (73 unique)   	 Time: 2.5499792098999023
+2022-09-11 01:49:22,589 - Analysis - INFO - Generation number 8 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 292 (83 unique)   	 Time: 3.017935276031494
+2022-09-11 01:49:23,028 - Analysis - INFO - Generation number 9 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 333 (93 unique)   	 Time: 3.4572362899780273
+2022-09-11 01:49:23,499 - Analysis - INFO - Generation number 10 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 374 (103 unique)   	 Time: 3.9285624027252197
+2022-09-11 01:49:23,978 - Analysis - INFO - Generation number 11 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 416 (113 unique)   	 Time: 4.407027721405029
+2022-09-11 01:49:24,443 - Analysis - INFO - Generation number 12 	 Code coverage: 97.20% (243/250) 	 Branch coverage: 90.00% (18/20) 	 Transactions: 457 (123 unique)   	 Time: 4.872697591781616
+2022-09-11 01:49:24,706 - Analysis - INFO - Generation number 13 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 479 (138 unique)   	 Time: 5.1353678703308105
+2022-09-11 01:49:24,924 - Analysis - INFO - Generation number 14 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 495 (145 unique)   	 Time: 5.353277921676636
+2022-09-11 01:49:25,319 - Analysis - INFO - Generation number 15 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 523 (153 unique)   	 Time: 5.74845027923584
+2022-09-11 01:49:25,694 - Analysis - INFO - Generation number 16 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 550 (162 unique)   	 Time: 6.12359094619751
+2022-09-11 01:49:26,105 - Analysis - INFO - Generation number 17 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 579 (171 unique)   	 Time: 6.5339906215667725
+2022-09-11 01:49:26,532 - Analysis - INFO - Generation number 18 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 610 (181 unique)   	 Time: 6.960890054702759
+2022-09-11 01:49:26,967 - Analysis - INFO - Generation number 19 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 641 (191 unique)   	 Time: 7.396620988845825
+2022-09-11 01:49:27,374 - Analysis - INFO - Generation number 20 	 Code coverage: 98.40% (246/250) 	 Branch coverage: 95.00% (19/20) 	 Transactions: 672 (201 unique)   	 Time: 7.803716659545898
+2022-09-11 01:49:27,383 - Analysis - INFO - -----------------------------------------------------
+2022-09-11 01:49:27,383 - Analysis - INFO - Number of generations: 	 20
+2022-09-11 01:49:27,383 - Analysis - INFO - Number of transactions: 	 672 (201 unique)
+2022-09-11 01:49:27,383 - Analysis - INFO - Transactions per second: 	 86
+2022-09-11 01:49:27,383 - Analysis - INFO - Total code coverage: 	 98.40% (246/250)
+2022-09-11 01:49:27,383 - Analysis - INFO - Total branch coverage: 	 95.00% (19/20)
+2022-09-11 01:49:27,383 - Analysis - INFO - Total execution time: 	 7.81 seconds
+2022-09-11 01:49:27,384 - Analysis - INFO - Total memory consumption: 	 65.15 MB
+
+     ______            ______                _           
+    / ____/___  ____  / ____/_  __________  (_)_  _______
+   / /   / __ \/ __ \/ /_  / / / /_  /_  / / / / / / ___/
+  / /___/ /_/ / / / / __/ / /_/ / / /_/ /_/ / /_/ (__  ) 
+  \____/\____/_/ /_/_/    \__,_/ /___/___/_/\__,_/____/  
+
+@@@@@@@@create_fake_accounts create_fake_accounts create_fake_accounts %s ['0xcafebabecafebabecafebabecafebabecafebabe', '0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef']
+@@@@@@@@ constructor not in !!! 1111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@e_t_a: These function may contain bug :!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ s% ['token(uint256)']
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@e_t_a: These function may contain bug :!!! @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ s% ['token(uint256)', 'transfer(address,uint256)']
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
+@@@@@@@@execution_trace_analysis: population.individuals  s% 1111111111
